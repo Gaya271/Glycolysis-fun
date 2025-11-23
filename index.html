@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glycolysis App</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2a9d8f">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Glycolysis Learning App</h1>
+    <div id="app" class="card"><p>Loading steps...</p></div>
+    <button id="nextBtn">Next Step</button>
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js').then(() => console.log('Service Worker Registered'));
+        }
+    </script>
+</body>
+</html>
